@@ -16,7 +16,7 @@ const AnimatedCounter = ({ value, suffix, delay = 0 }: { value: number; suffix?:
     const stepValue = value / steps;
     const stepDuration = duration / steps;
     let currentStep = 0;
-    let intervalId: NodeJS.Timeout | null = null;
+    let intervalId: number | null = null;
 
     const timer = setTimeout(() => {
       intervalId = setInterval(() => {
